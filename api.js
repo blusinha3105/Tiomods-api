@@ -14,7 +14,7 @@ const zrapi = require('zrapi')
 const jpeg = require('jpeg-js')
 const { GOOGLE_IMG_SCRAP , GOOGLE_QUERY } = require('google-img-scrap');
 const yts = require('yt-search')
-//const translate = require('translate-google-api')
+const translate = require('translate-google-api')
 const multer = require('multer')
 const Ddos = require('ddos')
 const express = require('express')
@@ -22,27 +22,27 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fetch = require('node-fetch')
 const FormData = require('form-data')
-//const canvacord = require("canvacord")
-//const lyricsFinder2 = require('lyrics-finder');
+const canvacord = require("canvacord")
+const lyricsFinder2 = require('lyrics-finder');
 const uber = require('uberduck-api')
 var { igstory} = require('./base de dados/scrape.js');
 const { Youtube } = require('ytdownloader.js')
-//var canvasx = require('discord-canvas')
+var canvasx = require('discord-canvas')
 var { fromBuffer } = require('file-type')
-//const BrainlySearch = require('./base de dados/brainly.js')
+const BrainlySearch = require('./base de dados/brainly.js')
 const {fetchJson} = require('./base de dados/myfunc')
-//const isUrl = require("is-url")
-//var aexm = require('@lolikillers/aexm-api');
+const isUrl = require("is-url")
+var aexm = require('@lolikillers/aexm-api');
 var gerarnick = require('./base de dados/gerarnick.js')
 var { mediafireDl } = require('./base de dados/mediafire.js');
 const twtdl = require('./base de dados/twtdl.js')
-//const yt = require("@ernestoyoofi/yt.loader-to");
+const yt = require("@ernestoyoofi/yt.loader-to");
 var buffer = require('./base de dados/upload.js')
 var exec = require('child_process').exec;
 var { Maker } = require('imagemaker.js')
 var TikTokScraper = require('tiktok-scraper');
 var download = require('@phaticusthiccy/open-apis')
-//const Correios = require('cep-address-finder')
+const Correios = require('cep-address-finder')
 const { EmojiAPI } = require("emoji-api");
 const emoji = new EmojiAPI();
 var thiccysapi = require('textmaker-thiccy');
@@ -53,20 +53,20 @@ const mumaker = require(bla + '/base de dados/modules/mumaker');
 var wiki = require("@dada513/wikipedia-search")
 const ytdl = require("ytdl-core")
 var { searchSpotify, getTrackSpotify, getAlbumSpotify, getPlaylistSpotify, getArtistSpotify, getDownloadMultiLink, getDownloadSingleLink } = require('./base de dados/spotify.js')
-//const NASA = require('@killovsky/nasa');
+const NASA = require('@killovsky/nasa');
 var trans = require('@vitalets/google-translate-api')
-//const SANIME = require('selfietoanime');
-//var Deezer = require("deezer-web-api");
-//var DeezerClient = new Deezer();
+const SANIME = require('selfietoanime');
+var Deezer = require("deezer-web-api");
+var DeezerClient = new Deezer();
 const {savefrom} = require('./base de dados/savefrom.js')
-//const Pokemon = require('pokemon.js');
+const Pokemon = require('pokemon.js');
 const cors = require('cors')
 const GleysonBotsl = require("./base de dados/listdl.js")
 const testing = require("./base de dados/listdl2.js")
 const BitlyClient = require('bitly').BitlyClient
 const TinyURL = require('tinyurl');
-//const unfetch = require('isomorphic-unfetch');
-//const { getData, getPreview, getTracks, getDetails } = require('spotify-url-info')(unfetch)
+const unfetch = require('isomorphic-unfetch');
+const { getData, getPreview, getTracks, getDetails } = require('spotify-url-info')(unfetch)
 const { wikimedia } = require("./base de dados/scraper/wikimedia.js")
 const { wall } = require("./base de dados/scraper/scraper.js")
 
@@ -98,14 +98,14 @@ var { memesDroid } = require('./base de dados/scraper/aleacrapper.js')
 var { ringtone } = require('./base de dados/scraper/ringtone.js')
 var { lirik } = require('./base de dados/sab_scraper.js')
 
-//const { AnimeWallpaper } = require("anime-wallpaper");
-//const BuscaWallpaper = new AnimeWallpaper();
-//const { snapsave } = require("@bochilteam/scraper")
+const { AnimeWallpaper } = require("anime-wallpaper");
+const BuscaWallpaper = new AnimeWallpaper();
+const { snapsave } = require("@bochilteam/scraper")
 
 var { facebookDownloader, instaVideoV1 } = require('./base de dados/scraper/downloaders.js')
 var { LetradaMusica } = require('./base de dados/letraMusic.js')
 
-//const { musicard, comunismo, bolsonaro, bnw, blurr, affect, beautiful,circle, del, gay, invert, facepalm, dither, jail, magik, pixelate, rip, sepia, rotate, trash, wanted, wasted, bobross, mms } = require('./base de dados/canvas.js')
+const { musicard, comunismo, bolsonaro, bnw, blurr, affect, beautiful,circle, del, gay, invert, facepalm, dither, jail, magik, pixelate, rip, sepia, rotate, trash, wanted, wasted, bobross, mms } = require('./base de dados/canvas.js')
 
 const { happymodr } = require('./base de dados/happymod.js')
 const { wikiSearch } = require('./base de dados/wikipediaBr.js');
@@ -188,15 +188,15 @@ function delFile(file) {
 try { fs.unlinkSync(file) } catch (error) {}
 }
 
-//const { UltimateTextToImage, registerFont } = require("ultimate-text-to-image");
-/*
+const { UltimateTextToImage, registerFont } = require("ultimate-text-to-image");
+
 const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 
 ffmpeg.setFfmpegPath(ffmpegPath);
 
 registerFont((__dirname + '/base de dados/fontes/NotoEmoji.ttf'), { family: 'Noto Emoji' });
 registerFont(__dirname + '/base de dados/fontes/NotoSansMono.ttf', { family: 'Noto Sans Mono' });
-*/
+
 let randomName = (ext) => uuid().split('-')[0] + (ext ? ext : '');
 
 var cores = ['red','lime','yellow','magenta','cyan'];
@@ -6228,10 +6228,9 @@ RG_US(apikey, req);
 })
 
 // Agradecimento a Paulo da Japa-Apis \\
-//router.get('/api/canvas/musicard', musicard)  
-//router.get('/api/canvas/comunismo', comunismo)  
-//router.get('/api/canvas/bolsonaro', bolsonaro)
-/* 
+router.get('/api/canvas/musicard', musicard)  
+router.get('/api/canvas/comunismo', comunismo)  
+router.get('/api/canvas/bolsonaro', bolsonaro)
 router.get('/api/canvas/bnw', bnw) 
 router.get('/api/canvas/affect', affect) 
 router.get('/api/canvas/blur', blurr) 
@@ -6255,7 +6254,7 @@ router.get('/api/canvas/bobross', bobross)
 router.get('/api/canvas/mms', mms)
 
 router.get('/api/happymod', happymodr)
-*/
+
 app.get('/about',(req, res) => {
 res.json({
 status:true,
